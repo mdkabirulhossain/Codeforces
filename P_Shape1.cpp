@@ -2,11 +2,11 @@
 using namespace std;
 
 int main(){
-    int n;
-    cin >> n;
+    int N;
+    cin >> N;
 
-    for(int i=1; i<=n; i++){
-        for(int j=n; j>=i; j--){
+    for(int i=1; i<=N; i++){
+        for(int j=N; j>=i; j--){
             cout<<"*";
         }
         cout <<endl;
