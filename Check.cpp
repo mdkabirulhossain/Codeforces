@@ -1,15 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void fun(int n, int i){
-    if(i > n) return ;
 
-    fun(n, i+1);
-    cout << i << endl;
+bool is_Palindrome(string n, int l, int i){
+    if(i >= l) return true;
+
+    if(n[l] != n[i]){
+        return false;
+    }
+    return is_Palindrome(n, l-1, i+1);
 }
-
 int main(){
-    int n=5, i=1;
-    fun(n, i);
-    return 0;
+    string n;
+    cin >> n;
+    int i=0, l=n.size()-1;
+
+    
+   cout << is_Palindrome(n, l, i);
 }
