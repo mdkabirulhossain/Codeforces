@@ -9,14 +9,17 @@ int main() {
    char c;
 
    for (int i = 0; i < n; i++) {
-        scanf(" %c", &c);
+        cin >> c;
         freq[c - 'a']++;
     }
 
     for (int i = 0; i < 26; i++) {
-        while (freq[i]--) {
-            putchar('a' + i);
+
+        if(freq[i] != 0){
+            
+             cout << i <<" : "<< char('a'+i)<<endl;
         }
+       
     }
 
     return 0;
