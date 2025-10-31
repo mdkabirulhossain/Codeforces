@@ -9,6 +9,13 @@ public:
     int marks;
 };
 
+bool cmp(Student a, Student b){
+    if(a.marks >= b.marks){
+        return true;
+    }else{
+        return false;
+    }
+}
 int main()
 {
 
@@ -24,16 +31,19 @@ int main()
         cin >> arr[i].roll >> arr[i].marks;
     }
 
-    for (int i = 0; i < n - 1; i++)
-    {
-        for (int j = i + 1; j < n; j++)
-        {
-            if (arr[i].marks < arr[j].marks)
-            {
-                swap(arr[i], arr[j]);
-            }
-        }
-    }
+    // for (int i = 0; i < n - 1; i++)
+    // {
+    //     for (int j = i + 1; j < n; j++)
+    //     {
+    //         if (arr[i].marks < arr[j].marks)
+    //         {
+    //             swap(arr[i], arr[j]);
+    //         }
+    //     }
+       
+    // }
+    //Solve using sort bilt in library
+    sort(arr, arr+n, cmp);
 
     for (int i = 0; i < n; i++)
     {
